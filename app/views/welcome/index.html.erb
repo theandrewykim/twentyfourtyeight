@@ -1,6 +1,11 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <%=javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'%>
+  <%= javascript_include_tag 'document' %>
+  <%= javascript_include_tag 'game' %>
+  <%= javascript_include_tag 'moustrap' %>
+  <%= javascript_include_tag 'underscore' %>
 </head>
 <body>
 <div id="game-board">
@@ -41,6 +46,6 @@ High Score: 0
   </div>
 
 <button type="button" id="new-game"> New Game!
-  </button> -->
+  </button>
 </body>
 </html>
