@@ -93,7 +93,7 @@ GEM
       activemodel (= 5.0.3)
       activerecord (= 5.0.3)
       activesupport (= 5.0.3)
-      bundler (>= 1.0.0, < 2.0)
+      bundler (>= 1.2.0, < 2.0)
       railties (= 5.0.3)
       sprockets-rails (>= 2.0.0)
     rails-dom-testing (2.0.3)
