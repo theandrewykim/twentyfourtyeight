@@ -16,12 +16,33 @@ $(document).ready(function() {
   })
 
 
+  $(document).keydown(function(e) {
+      switch(e.which) {
+          case 37: // left
+            game.move("left")
+          break;
 
+          case 38: // up
+            game.move("up")
+          break;
 
-  Mousetrap.bind('left', function() { game.move("left")});
-   Mousetrap.bind('right', function() { game.move("right")});
-    Mousetrap.bind('up', function() { game.move("up")});
-     Mousetrap.bind('down', function() { game.move("down")});
+          case 39: // right
+            game.move("right")
+          break;
+
+          case 40: // down
+            game.move("down")
+          break;
+
+          default: return; // exit this handler for other keys
+      }
+      e.preventDefault(); // prevent the default action (scroll / move caret)
+  });
+
+  // Mousetrap.bind('left', function() { game.move("left")});
+  //  Mousetrap.bind('right', function() { game.move("right")});
+  //   Mousetrap.bind('up', function() { game.move("up")});
+  //    Mousetrap.bind('down', function() { game.move("down")});
 
 
 
