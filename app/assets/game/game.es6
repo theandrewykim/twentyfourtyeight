@@ -161,6 +161,7 @@ Game.prototype.gameOver = function(){
   }else if(newBoardArray.join('') === newGame.move("left").join('') && newBoardArray.join('') === newGame.move("right").join('') && newBoardArray.join('') === newGame.move("down").join('') && newBoardArray.join('') === newGame.move("up").join('')){
     alert("You Suck! Your final score was: "+ this.score * 100)
 
+//
   }
 
 }
