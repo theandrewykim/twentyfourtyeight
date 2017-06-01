@@ -51,6 +51,17 @@ $(document).ready(function() {
      $("#new-game").on("click", function(event){
       game = new Game
       makeBoard()
+      var gameData = {board: game.boardArray.join(), score: game.score }
+      $.ajax({
+                data: gameData ,
+                type: 'POST',
+                url: '/games',
+                success: function () {
+                  console.log('done')
+                },
+                error: function (response) {
+                }
+            });
 
 
      })

@@ -92,6 +92,7 @@ Game.prototype.combine = function(){
       row[index] = 0
       this.score += sum
 
+
        this.boardArray = _.flatten(boardArrays)
 
       }

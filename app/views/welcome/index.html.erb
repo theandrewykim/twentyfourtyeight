@@ -9,44 +9,46 @@
 </head>
 <body>
 
-<div id="game-board">
-  <h1> Welcome to 2048! </h1>
-  <table>
-    <tr>
-  <td class ="tile" id="tile1"></td>
-  <td class ="tile" id="tile2"></td>
-  <td class ="tile" id="tile3"></td>
-  <td class ="tile" id="tile4"></td>
-</tr>
-<tr>
-  <td class ="tile" id="tile5"></td>
-  <td class ="tile" id="tile6"></td>
-  <td class ="tile" id="tile7"></td>
-  <td class ="tile" id="tile8"></td>
+<% if user_signed_in?%>
+  <div id="game-board">
+    <h1> Welcome to 2048! </h1>
+    <table>
+      <tr>
+    <td class ="tile" id="tile1"></td>
+    <td class ="tile" id="tile2"></td>
+    <td class ="tile" id="tile3"></td>
+    <td class ="tile" id="tile4"></td>
   </tr>
   <tr>
-  <td class ="tile"  id="tile9"></td>
-  <td class ="tile" id="tile10"></td>
-  <td class ="tile" id="tile11"></td>
-  <td class ="tile" id="tile12"></td>
-</tr>
-<tr>
-  <td class ="tile" id="tile13"></td>
-  <td class ="tile" id="tile14"></td>
-  <td class ="tile" id="tile15"></td>
-  <td class ="tile" id="tile16"></td>
-</tr>
-  </table>
-</div>
-
-<div class="score" id="score">
-Current Score: 0
+    <td class ="tile" id="tile5"></td>
+    <td class ="tile" id="tile6"></td>
+    <td class ="tile" id="tile7"></td>
+    <td class ="tile" id="tile8"></td>
+    </tr>
+    <tr>
+    <td class ="tile"  id="tile9"></td>
+    <td class ="tile" id="tile10"></td>
+    <td class ="tile" id="tile11"></td>
+    <td class ="tile" id="tile12"></td>
+  </tr>
+  <tr>
+    <td class ="tile" id="tile13"></td>
+    <td class ="tile" id="tile14"></td>
+    <td class ="tile" id="tile15"></td>
+    <td class ="tile" id="tile16"></td>
+  </tr>
+    </table>
   </div>
-  <div class="score" id="high-score">
-High Score: 0
-  </div>
 
-<button type="button" id="new-game"> New Game!
-  </button>
+  <div class="score" id="score">
+  Current Score: 0
+    </div>
+    <div class="score" id="high-score">
+  High Score: 0
+    </div>
+
+  <button type="button" id="new-game"> New Game!
+    </button>
+  <%end%>
 </body>
 </html>
