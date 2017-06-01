@@ -14,43 +14,41 @@ $(document).ready(function() {
       highScore = game.score
     $("#high-score").text("High Score: " + game.score * 100)
     }
-
-    $(document).keydown(function(e) {
-        switch(e.which) {
-            case 37: // left
-              game.move("left")
-            break;
-
-            case 38: // up
-              game.move("up")
-            break;
-
-            case 39: // right
-              game.move("right")
-            break;
-
-            case 40: // down
-              game.move("down")
-            break;
-
-            default: return; // exit this handler for other keys
-        }
-        e.preventDefault(); // prevent the default action (scroll / move caret)
-    });
-
-
-
-
-       $("#new-game").on("click", function(event){
-        game = new Game
-        makeBoard()
-
-
-       })
   })
 
 
+  $(document).keydown(function(e) {
+      switch(e.which) {
+          case 37: // left
+            game.move("left")
+          break;
 
+          case 38: // up
+            game.move("up")
+          break;
+
+          case 39: // right
+            game.move("right")
+          break;
+
+          case 40: // down
+            game.move("down")
+          break;
+
+          default: return; // exit this handler for other keys
+      }
+      e.preventDefault(); // prevent the default action (scroll / move caret)
+  });
+
+
+
+
+     $("#new-game").on("click", function(event){
+      game = new Game
+      makeBoard()
+
+
+     })
 });
 
 
