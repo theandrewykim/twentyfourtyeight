@@ -16,9 +16,9 @@ $(document).ready(function() {
     }
   })
 
-  if($("#game-board".length) { 
+
     $(document).keydown(function(e) {
-        console.log(e); 
+      if($("#game-board".length) {
         switch(e.which) {
             case 37: // left
               game.move("left")
@@ -39,8 +39,8 @@ $(document).ready(function() {
             default: return; // exit this handler for other keys
         }
         e.preventDefault(); // prevent the default action (scroll / move caret)
-    })
-  };
+      };
+    });
 
 
 
