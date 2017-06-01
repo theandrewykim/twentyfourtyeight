@@ -39,7 +39,7 @@ $(document).ready(function() {
 
             default: return; // exit this handler for other keys
         }
-        e.preventDefault(); // prevent the default action (scroll / move caret)
+        // e.preventDefault(); // prevent the default action (scroll / move caret)
       };
     });
 
