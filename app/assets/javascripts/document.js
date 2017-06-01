@@ -51,7 +51,7 @@ $(document).ready(function() {
      $("#new-game").on("click", function(event){
       game = new Game
       makeBoard()
-      var gameData = {board: game.boardArray.join(), score: game.score }
+      var gameData = {board: game.boardArray.join(), current_score: game.score }
       $.ajax({
                 data: gameData ,
                 type: 'POST',
