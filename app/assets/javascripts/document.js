@@ -18,8 +18,8 @@ $(document).ready(function() {
 
 
   $(document).keydown(function(e) {
+      console.log(e);  
       switch(e.which) {
-          console.log('hello')
           case 37: // left
             game.move("left")
           break;
