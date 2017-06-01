@@ -16,30 +16,31 @@ $(document).ready(function() {
     }
   })
 
+  if($("#game-board".length) { 
+    $(document).keydown(function(e) {
+        console.log(e); 
+        switch(e.which) {
+            case 37: // left
+              game.move("left")
+            break;
 
-  $(document).keydown(function(e) {
-      console.log(e);  
-      switch(e.which) {
-          case 37: // left
-            game.move("left")
-          break;
+            case 38: // up
+              game.move("up")
+            break;
 
-          case 38: // up
-            game.move("up")
-          break;
+            case 39: // right
+              game.move("right")
+            break;
 
-          case 39: // right
-            game.move("right")
-          break;
+            case 40: // down
+              game.move("down")
+            break;
 
-          case 40: // down
-            game.move("down")
-          break;
-
-          default: return; // exit this handler for other keys
-      }
-      e.preventDefault(); // prevent the default action (scroll / move caret)
-  });
+            default: return; // exit this handler for other keys
+        }
+        e.preventDefault(); // prevent the default action (scroll / move caret)
+    })
+  };
 
 
 
