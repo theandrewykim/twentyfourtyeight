@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 
     $(document).keydown(function(e) {
-      if($("#game-board").length){
+      if($("#game-board").length >= 1){
         switch(e.which) {
             case 37: // left
               game.move("left")
