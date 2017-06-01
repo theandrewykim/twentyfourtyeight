@@ -4,7 +4,9 @@ $(document).ready(function() {
 
 
   $(document).on("keydown", function(event){
-    event.preventDefault();
+    if($("#game-board").length >= 1){
+      event.preventDefault();
+    }
     makeBoard();
     // $.playSound('http://flashkit.com/imagesvr_ce/flashkit/soundfx/Ambience/Woop-Ryan_Cur-8800/Woop-Ryan_Cur-8800_hifi')
     game.gameOver();
@@ -39,7 +41,7 @@ $(document).ready(function() {
 
             default: return; // exit this handler for other keys
         }
-        // e.preventDefault(); // prevent the default action (scroll / move caret)
+        e.preventDefault(); // prevent the default action (scroll / move caret)
       };
     });
 
