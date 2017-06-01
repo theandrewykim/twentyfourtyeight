@@ -1,13 +1,12 @@
 $(document).ready(function() {
 
   makeBoard()
-  var music = $.playSound('good_morning')
 
 
   $(document).on("keydown", function(event){
     event.preventDefault();
     makeBoard();
-    $.playSound('http://flashkit.com/imagesvr_ce/flashkit/soundfx/Ambience/Woop-Ryan_Cur-8800/Woop-Ryan_Cur-8800_hifi')
+    // $.playSound('http://flashkit.com/imagesvr_ce/flashkit/soundfx/Ambience/Woop-Ryan_Cur-8800/Woop-Ryan_Cur-8800_hifi')
     game.gameOver();
     $("#score").text("Current Score: " + game.score * 100)
 
@@ -47,8 +46,6 @@ $(document).ready(function() {
      $("#new-game").on("click", function(event){
       game = new Game
       makeBoard()
-      $("#music").remove()
-      $.playSound('good_morning')
 
 
      })
