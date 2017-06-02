@@ -3,7 +3,7 @@ class CreateGames < ActiveRecord::Migration[5.0]
     create_table :games do |t|
       t.integer :current_score
       t.string :board
-      t.references :users, index: true
+      t.references :user, index: true
 
       t.timestamps
     end

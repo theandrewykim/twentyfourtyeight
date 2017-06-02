@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 20170601033150) do
   create_table "games", force: :cascade do |t|
     t.integer  "current_score"
     t.string   "board"
-    t.integer  "users_id"
+    t.integer  "user_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["users_id"], name: "index_games_on_users_id", using: :btree
+    t.index ["user_id"], name: "index_games_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
