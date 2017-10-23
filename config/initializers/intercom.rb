@@ -12,12 +12,13 @@ IntercomRails.config do |config|
   # This is required to enable secure mode, you can find it on your Setup
   # guide in the "Secure Mode" step.
   #
-  # config.api_secret = "..."
+  config.api_secret = "xOBUYaBg2y8FSdUCyNxHUOnxrYBSQK7nn1LBCsct"
 
   # == Enabled Environments
   # Which environments is auto inclusion of the Javascript enabled for
-  #
-  config.enabled_environments = ["development", "production"]
+
+     config.user.lead_attributes = %w[language_override]
+
 
   # == Current user method/variable
   # The method/variable that contains the logged in user in your controllers.
